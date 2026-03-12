@@ -16,7 +16,7 @@ body {
 
 h1 {
     width: 100%;
-    padding: 20px 0px;
+    padding: 16px 0px;
     text-align: center;
     color: #d4d3d3;
     background: #090f1a;
@@ -171,6 +171,7 @@ textarea {
     }
 
 }
+
 
 
 
