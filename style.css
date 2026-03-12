@@ -165,11 +165,12 @@ textarea {
 }
 
 /*--- --- MEDIA QUERIES --- ---*/
-@media (max-width: 420px) {
+@media (max-width: 576px) {
     .note {
         width: 42vw;
     }
 
 }
+
 
 
