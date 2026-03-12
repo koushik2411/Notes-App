@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(180deg, #f4f4f4, #090f1a3e);
+}
+
+h1 {
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+    color: #d4d3d3;
+    background: #090f1a;
+}
+
+#searchInput {
+    padding: 8px;
+    width: 80vw;
+    border-radius: 8px;
+}
+
+#addNoteBtn {
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #778, #333);
+    color: #f4f4f4;
+    border: none;
+    box-shadow: -1px 1px 4px #757575;
+}
+
+button:active {
+    scale: 0.93;
+}
+
+#notesContainer {
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.note {
+    background: #ddd;
+    padding: 16px;
+    height: 280px;
+    width: 240px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: all 0.3s ease;
+}
+
+.note:hover {
+    transform: scale(1.1);
+}
+
+textarea {
+    border: none;
+    resize: none;
+    outline: none;
+    height: 150px;
+    padding: 8px;
+    border-radius: 8px;
+    scrollbar-width: thin;
+}
+
+.deleteBtn {
+    background: linear-gradient(180deg, #fd5353, #e10101);
+    color: #f4f4f4;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: -1px 1px 4px #090f1a8b;
+}
+
+.colorPicker {
+    width: 20px;
+    height: 22px;
+    border: none;
+    padding: 2px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ff0000,#ff9d00,#ffd900,#48ff00,#00fff7, #3300ff, #ff00e6);
+    opacity: 0.7;
+}
+.colorPicker::-webkit-color-swatch{
+    border: none;
+    border-radius: 50%;
+}
+
+.timeStamp {
+    margin-top: 8px;
+    font-size: 10px;
+}
+
+#noteModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    backdrop-filter: blur(2px);
+}
+
+#noteModal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalContent{
+    width: 80%;
+    padding: 16px;
+    min-width: 600px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.8);
+    transition: transform 0.5s cubic-bezier(.22,1,.36,1);
+    will-change: transform;
+}
+
+#noteModal.active .modalContent {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#modalTextarea {
+    height: 85vh;
+    width: 85vw;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    scrollbar-width: thin;
+}
+
+#closeModal {
+    background: linear-gradient(180deg, #fd5353, #e10101);
+    color: #f4f4f4;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/*--- --- MEDIA QUERIES --- ---*/
+@media (max-width: 420px) {
+    .note {
+        width: 42vw;
+    }
+}
