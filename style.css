@@ -146,7 +146,7 @@ textarea {
 }
 
 #modalTextarea {
-    height: 85vh;
+    height: 80vh;
     width: 85vw;
     padding: 8px;
     border: none;
@@ -167,7 +167,8 @@ textarea {
 /*--- --- MEDIA QUERIES --- ---*/
 @media (max-width: 420px) {
     .note {
-        width: 40vw;
+        width: 42vw;
     }
 
 }
+
