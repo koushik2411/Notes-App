@@ -147,7 +147,7 @@ textarea {
 
 #modalTextarea {
     height: 80vh;
-    width: 85vw;
+    width: 90vw;
     padding: 8px;
     border: none;
     outline: none;
@@ -171,4 +171,5 @@ textarea {
     }
 
 }
+
 
